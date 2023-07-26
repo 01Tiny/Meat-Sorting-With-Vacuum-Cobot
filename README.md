@@ -35,7 +35,7 @@ https://pytorch.org/hub/ultralytics_yolov5/
 https://moveit.ros.org/moveit/ros/humble/2022/06/02/MoveIt-Humble-Release.html
 
 ### Intel Realsense SDK 2.0  
-https://www.intelrealsense.com/sdk-2/
+https://www.intelrealsense.com/sdk-2/  
 https://github.com/IntelRealSense/realsense-ros
 
 ### Custom vacuum program
@@ -74,4 +74,44 @@ sudo apt install ros-humble-desktop
 #### 2.7 - To begin developing, source the setup script
 ```
 source /opt/ros/humble/setup.bash
+```
+### 3. Intel RealSense D435 SDK 2.0
+#### 3.1 - Register the server's public key
+```
+sudo mkdir -p /etc/apt/keyrings  
+curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | sudo tee /etc/apt/keyrings/librealsense.pgp > /dev/null
+```
+### 3.2 - Ensure apt HTTPS support is installed
+```
+sudo apt-get install apt-transport-https
+```
+### 3.3 - Add the server to the list of repositories
+```
+echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
+sudo tee /etc/apt/sources.list.d/librealsense.list
+sudo apt-get update
+```
+### 3.4 - Install dependent libraries
+```
+sudo apt-get install librealsense2-dkms  
+sudo apt-get install librealsense2-utils
+```
+### 3.5 - Optionally install dev and debug libraries
+```
+sudo apt-get install librealsense2-dev  
+sudo apt-get install librealsense2-dbg
+```
+### 3.6 - Verify Installation 
+```
+realsense-viewer
+```
+### 3.7 - Verify that the kernel is updated
+```
+modinfo uvcvideo | grep "version:"
+```
+***If the output includes realsense in the string it is successfully updated***  
+## 4. Installing ROS2 Wrapper for Intel Realsense
+### 4.1 - Install git
+```
+sudo apt install git
 ```

@@ -36,6 +36,7 @@ https://moveit.ros.org/moveit/ros/humble/2022/06/02/MoveIt-Humble-Release.html
 
 ### Intel Realsense SDK 2.0  
 https://www.intelrealsense.com/sdk-2/
+https://github.com/IntelRealSense/realsense-ros
 
 ### Custom vacuum program
 

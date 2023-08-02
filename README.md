@@ -143,9 +143,6 @@ ros2 launch realsense2_camera rs_launch.py depth_module.profile:=1280x720x30 poi
 source /opt/ros/humble/setup.bash
 ```
 ```
-source $COLCON_WS/install/setup.bash
-```
-```
 cd $COLCON_WS
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```

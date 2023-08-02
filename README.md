@@ -146,7 +146,9 @@ source /opt/ros/humble/setup.bash
 cd $COLCON_WS
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
-
+```
+source ws_moveit2/install/setup.bash
+```
 
 
 

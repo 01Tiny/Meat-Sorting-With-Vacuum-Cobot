@@ -119,7 +119,16 @@ sudo apt install git
 ```
 sudo apt install ros-humble-realsense2-*
 ```
-### 4.3 - Start the camera node with ros2 launch
+
+
+
+
+
+
+
+
+## Running code
+### Start the camera node with ros2 launch
 ```
 source /opt/ros/humble/setup.bash
 ```
@@ -127,3 +136,31 @@ source /opt/ros/humble/setup.bash
 ros2 launch realsense2_camera rs_launch.py
 ros2 launch realsense2_camera rs_launch.py depth_module.profile:=1280x720x30 pointcloud.enable:=true
 ```
+
+
+### Start the MoveIt node
+```
+source /opt/ros/humble/setup.bash
+```
+```
+source $COLCON_WS/install/setup.bash
+```
+```
+cd $COLCON_WS
+colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

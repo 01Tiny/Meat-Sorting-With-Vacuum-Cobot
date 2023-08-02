@@ -115,3 +115,15 @@ modinfo uvcvideo | grep "version:"
 ```
 sudo apt install git
 ```
+### 4.2 - Install debian package from ROS servers
+```
+sudo apt install ros-humble-realsense2-*
+```
+### 4.3 - Start the camera node with ros2 launch
+```
+source /opt/ros/humble/setup.bash
+```
+```
+ros2 launch realsense2_camera rs_launch.py
+ros2 launch realsense2_camera rs_launch.py depth_module.profile:=1280x720x30 pointcloud.enable:=true
+```

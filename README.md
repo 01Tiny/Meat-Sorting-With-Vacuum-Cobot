@@ -110,6 +110,12 @@ realsense-viewer
 modinfo uvcvideo | grep "version:"
 ```
 ***If the output includes realsense in the string it is successfully updated***  
+
+
+### 3.8 - Claibrate the camera
+https://dev.intelrealsense.com/docs/self-calibration-for-depth-cameras
+
+
 ## 4. Installing ROS2 Wrapper for Intel Realsense
 ### 4.1 - Install git
 ```

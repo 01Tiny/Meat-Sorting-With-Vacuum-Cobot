@@ -164,7 +164,7 @@ ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168
 ```
 
 ```
-ros2 launch ur_robot_driver test_scaled_joint_trajectory_controller.launch.py
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
 ```
 
 

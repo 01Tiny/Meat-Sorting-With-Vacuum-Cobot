@@ -167,7 +167,13 @@ ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
 ```
 
+## Trying to install ROS2 controller for VG10 
+http://wiki.ros.org/onrobot/Tutorials/Control%20of%20an%20VG%20Gripper%20using%20the%20Modbus%20TCP%20protocol%20%28Noetic%29  
+  
+https://github.com/BrettRD/onrobot_grippers/tree/main  
 
+### Porting ROS1 package to ROS2
+https://industrial-training-master.readthedocs.io/en/melodic/_source/session7/ROS1-to-ROS2-porting.html  
 
 
 

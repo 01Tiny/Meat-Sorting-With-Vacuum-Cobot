@@ -175,10 +175,19 @@ https://github.com/BrettRD/onrobot_grippers/tree/main
 ### Porting ROS1 package to ROS2
 https://industrial-training-master.readthedocs.io/en/melodic/_source/session7/ROS1-to-ROS2-porting.html  
 
-
-
-
-
+### Activating the VG10 gripper through termina once UR driver is running  
+Pin 16 is channel A  
+Pin 17 is channel B  
+State 1 turns vacuum on:  
+```
+ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 16, state: 1}"  
+ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 17, state: 1}"
+```
+State 0 turns vacuum off  
+```
+ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 16, state: 0}"  
+ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 17, state: 0}"
+```
 
 
 

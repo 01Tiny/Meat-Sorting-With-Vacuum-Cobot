@@ -32,7 +32,75 @@ https://docs.ros.org/en/humble/index.html
 https://pytorch.org/hub/ultralytics_yolov5/
 
 ### Movit 2  
-https://moveit.ros.org/moveit/ros/humble/2022/06/02/MoveIt-Humble-Release.html
+https://moveit.ros.org/moveit/ros/humble/2022/06/02/MoveIt-Humble-Release.html  
+#### Installation:  
+https://moveit.ros.org/install-moveit2/source/  
+#### Make sure you have the latest versions of packages installed:
+```
+sudo apt update
+sudo apt dist-upgrade
+rosdep update
+```
+#### Source installation requires various ROS2 build tools:
+```
+sudo apt install -y \
+  build-essential \
+  cmake \
+  git \
+  libbullet-dev \
+  python3-colcon-common-extensions \
+  python3-flake8 \
+  python3-pip \
+  python3-pytest-cov \
+  python3-rosdep \
+  python3-setuptools \
+  python3-vcstool \
+  wget && \
+# install some pip packages needed for testing
+python3 -m pip install -U \
+  argcomplete \
+  flake8-blind-except \
+  flake8-builtins \
+  flake8-class-newline \
+  flake8-comprehensions \
+  flake8-deprecated \
+  flake8-docstrings \
+  flake8-import-order \
+  flake8-quotes \
+  pytest-repeat \
+  pytest-rerunfailures \
+  pytest
+```
+#### Uninstall Any Pre-existing MoveIt Debians:
+```
+sudo apt remove ros-humble-moveit*
+
+```
+#### Create Workspace and Source:
+```
+export COLCON_WS=~/ros2_ws/
+mkdir -p $COLCON_WS/src
+cd $COLCON_WS/src
+```
+#### Download Source Code for Foxy, Galactic, Humble - (stable) :
+```
+git clone https://github.com/ros-planning/moveit2.git -b $ROS_DISTRO
+for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_$ROS_DISTRO.repos"; test -r $f && echo $f); do vcs import < "$repo"; done
+rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
+```
+#### Build MoveIt:
+```
+cd $COLCON_WS
+colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+#### Source the Colcon Workspace:
+```
+source ros2_ws/install/setup.bash
+```
+
+
+
+
 
 ### Intel Realsense SDK 2.0  
 https://www.intelrealsense.com/sdk-2/  

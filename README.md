@@ -236,9 +236,6 @@ sudo apt install ros-humble-realsense2-*
 
 
 
-
-
-
 ## Running code
 ### Start the camera node with ros2 launch
 ```
@@ -255,10 +252,11 @@ ros2 launch realsense2_camera rs_launch.py depth_module.profile:=1280x720x30 poi
 source /opt/ros/humble/setup.bash
 ```
 ```
-cd $COLCON_WS
+cd $ros2_ws
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 ```
+cd ~/
 source ros2_ws/install/setup.bash
 ```
 

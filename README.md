@@ -14,7 +14,9 @@
 ### UR5e Cobot  
 -Images and info
 ### OnRobot VG10 end effector  
-https://onrobot.com/sites/default/files/documents/VG10_Vacuun_Gripper_User_Manual_V1.1.1.pdf
+https://onrobot.com/sites/default/files/documents/VG10_Vacuun_Gripper_User_Manual_V1.1.1.pdf  
+##### Turning on VG10 through digital IO port
+https://forum.universal-robots.com/t/set-tool-i-o-with-ros2/24585
 ### Quick release coupling  
 ### NVIDIA Jetson Xavier NX  
 ### Intel Realsense D435 Depth and RGB Camera  

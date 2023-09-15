@@ -285,7 +285,7 @@ https://github.com/BrettRD/onrobot_grippers/tree/main
 ### Porting ROS1 package to ROS2
 https://industrial-training-master.readthedocs.io/en/melodic/_source/session7/ROS1-to-ROS2-porting.html  
 
-### Activating the VG10 gripper through termina once UR driver is running  
+### Activating the VG10 gripper through terminal once UR driver is running  
 Pin 16 is channel A  
 Pin 17 is channel B  
 State 1 turns vacuum on:  

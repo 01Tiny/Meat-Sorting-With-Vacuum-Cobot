@@ -95,6 +95,12 @@ rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 cd $COLCON_WS
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
+###### If running into RAM errors when building, use this command instead:
+```
+cd $COLCON_WS
+colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release --parallel-workers 1
+```
+
 #### Source the Colcon Workspace:
 ```
 source ros2_ws/install/setup.bash

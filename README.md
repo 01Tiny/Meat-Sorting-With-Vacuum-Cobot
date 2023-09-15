@@ -259,7 +259,7 @@ cd $COLCON_WS
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 ```
-source ws_moveit2/install/setup.bash
+source ros2_ws/install/setup.bash
 ```
 
 
@@ -273,7 +273,7 @@ ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
 ```
 
-## Trying to install ROS2 controller for VG10 
+### Trying to install ROS2 controller for VG10 
 http://wiki.ros.org/onrobot/Tutorials/Control%20of%20an%20VG%20Gripper%20using%20the%20Modbus%20TCP%20protocol%20%28Noetic%29  
   
 https://github.com/BrettRD/onrobot_grippers/tree/main  

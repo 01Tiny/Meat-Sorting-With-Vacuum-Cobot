@@ -14,6 +14,7 @@
 ### UR5e Cobot  
 -Images and info
 ### OnRobot VG10 end effector  
+https://onrobot.com/sites/default/files/documents/VG10_Vacuun_Gripper_User_Manual_V1.1.1.pdf
 ### Quick release coupling  
 ### NVIDIA Jetson Xavier NX  
 ### Intel Realsense D435 Depth and RGB Camera  

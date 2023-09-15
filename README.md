@@ -221,7 +221,7 @@ modinfo uvcvideo | grep "version:"
 ***If the output includes realsense in the string it is successfully updated***  
 
 
-### 3.8 - Claibrate the camera
+### 3.8 - Calibrate the camera
 https://dev.intelrealsense.com/docs/self-calibration-for-depth-cameras
 
 
@@ -266,10 +266,13 @@ source ros2_ws/install/setup.bash
 
 # Testing:
 ## MoveIT
+### In new terminal run this to launch UR driver, with robot switched on RVIZ should display real robot position
 ```
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168.1.102 launch_rviz:=true
 ```
+### Then press play on robot tablet, to run program setup for external control
 
+### Then in another terminal run this to launch moveit, allowing control of robot
 ```
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
 ```

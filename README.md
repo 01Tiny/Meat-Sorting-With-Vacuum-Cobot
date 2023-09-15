@@ -263,8 +263,8 @@ source ros2_ws/install/setup.bash
 ```
 
 
-#Testing:
-##MoveIT
+# Testing:
+## MoveIT
 ```
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168.1.102 launch_rviz:=true
 ```

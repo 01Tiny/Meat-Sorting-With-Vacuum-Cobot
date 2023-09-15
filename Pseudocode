@@ -1,1 +1,40 @@
+START
+      IMPORT ALL REQUIRED SERVICES
+      INITIALISE VALUES
 
+MOVE TO STARTING POSITION
+      TOOL HEAD PARALLEL TO WORKBENCH
+      CENTRE OF WORKBENCH
+      //publish position to moveit
+
+SCAN FOR MEAT
+      //import object bounding box from yoloV5
+
+PICKUP MEAT PIECE
+      MOVE TO ABOVE LOCATION
+            DEFINE LOCATION
+                  DEFINE THE MIDPOINT X and Y AS THE CENTRE OF THE BOUNDING BOX
+            TOOL HEAD PARALLEL TO WORKBENCH
+            //publish position to moveit
+      MOVE DOWN TO MEAT
+            DETERMINE HEIGHT OF MEAT
+                  //import meat depth from custom made depth package
+            //publish position to moveit
+      ACTIVATE VACUUM GRIPPER PORTS 16 AND 17
+            //publish '1' to PIN 16 and 17 ROS2 UR Driver
+
+DROP OFF MEAT
+      RAISE END EFFECTOR UP FROM TABLE
+            //publish to moveit
+      MOVE TO DROP OFF LOCATION
+            IDENTIFY PIECE
+                  //import object class from yoloV5
+            TOOL HEAD PARALLEL TO WORKBENCH
+            //publish position to moveit
+RELEASE VACUUM PRESSURE
+      //publish '0' to PIN 16 and 17 ROS2 UR Driver
+
+RETURN TO STARTING POSITION
+      TOOL HEAD PARALLEL TO WORKBENCH
+      CENTRE OF WORKBENCH
+      //publish position to moveit

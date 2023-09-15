@@ -74,7 +74,6 @@ python3 -m pip install -U \
 #### Uninstall Any Pre-existing MoveIt Debians:
 ```
 sudo apt remove ros-humble-moveit*
-
 ```
 #### Create Workspace and Source:
 ```

@@ -40,6 +40,10 @@ https://moveit.ros.org/moveit/ros/humble/2022/06/02/MoveIt-Humble-Release.html
 
 https://moveit.picknik.ai/main/doc/tutorials/getting_started/getting_started.html  
 
+      https://github.com/ros-planning/moveit2_tutorials/issues/719
+
+
+
 https://github.com/ros-planning/moveit2_tutorials/tree/main  
 
 https://moveit.picknik.ai/main/doc/examples/motion_planning_python_api/motion_planning_python_api_tutorial.html  

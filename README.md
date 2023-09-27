@@ -92,7 +92,7 @@ sudo apt remove ros-humble-moveit*
 ```
 #### Create Workspace and Source:
 ```
-export COLCON_WS=~/ros2_ws/
+export COLCON_WS=~/ws_moveit/
 mkdir -p $COLCON_WS/src
 cd $COLCON_WS/src
 ```
@@ -104,18 +104,18 @@ rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 ```
 #### Build MoveIt:
 ```
-cd ros2_ws
+cd ws_moveit
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 ##### If running into RAM errors when building, use this command instead:
 ```
-cd ros2_ws
+cd ws_moveit
 colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE_BUILD_TYPE=Release --parallel-workers 1
 ```
 
 #### Source the Colcon Workspace:
 ```
-source ros2_ws/install/setup.bash
+source ws_moveit/install/setup.bash
 ```
 
 

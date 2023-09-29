@@ -128,11 +128,8 @@ https://github.com/IntelRealSense/realsense-ros
 
 
 ## UR ROS2 Driver
-https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/tree/humble  
-```
-sudo apt-get install ros-humble-ur
-```
-
+**Make sure to build from source and not use binary install**
+https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/tree/humble#build-from-source
 
 ## Custom vacuum program
 

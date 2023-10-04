@@ -270,6 +270,40 @@ colcon build --event-handlers desktop_notification- status- --cmake-args -DCMAKE
 cd ~/
 source ros2_ws/install/setup.bash
 ```
+# How to Launch UR Driver and MoveIt (new working method with UR Driver installed from source in ws_moveit directory)
+## Step 1
+Turn on robot, load "Meat Capstone First Connection" program. Don't play program yet.
+## Step 2
+Plug in robot ethernet cable to laptop.
+## Step 3
+Open a new terminal.
+## Step 4 - Terminal 1 - Change to ws_moveit directory and source
+```
+cd ws_moveit
+source install/setup.bash
+source /opt/ros/humble/setup.bash
+```
+## Step 5 - Launch UR Driver
+```
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168.1.102 launch_rviz:=true
+```
+## Step 6
+Check RVIZ displays real UR robot position, then press play on program on UR5 tablet.
+## Step 7
+Open a new terminal.
+## Step 8 - Terminal 2 - Change to ws_moveit directory and source
+```
+cd ws_moveit
+source install/setup.bash
+source /opt/ros/humble/setup.bash
+```
+## Step 9
+```
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
+```
+## Step 10
+Ensure new RVIZ window displays real robot position, then drag arrow at the ebd effector of robot model to a new position.
+Press plan and execute button on RVIZ and observe real robot moving.
 
 
 # Testing:

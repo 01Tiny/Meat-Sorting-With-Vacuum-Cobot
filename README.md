@@ -277,3 +277,14 @@ ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, p
 ```
 ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 16, state: 0}" && ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 17, state: 0}"
 ```
+```
+cd workspace
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+```
+```
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168.1.102 launch_rviz:=true
+```
+```
+use_tool_communication:=true tool_voltage:=24
+```

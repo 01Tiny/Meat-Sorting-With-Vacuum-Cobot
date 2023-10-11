@@ -277,6 +277,7 @@ ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, p
 ```
 ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 16, state: 0}" && ros2 service call /io_and_status_controller/set_io ur_msgs/srv/SetIO "{fun: 1, pin: 17, state: 0}"
 ```
+# Testing Code
 ```
 cd workspace
 source /opt/ros/humble/setup.bash
